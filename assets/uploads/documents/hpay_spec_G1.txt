@@ -1,0 +1,1658 @@
+========================================================================================================
+//Add Member Request
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000100010001</productCode>
+    <hpayTrxType>OTHER</hpayTrxType>
+    <content xsi:type="addMemberXMLRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accessId>085711202011</accessId>
+        <address>Depok</address>
+        <memberName>Dahniar Palamani</memberName>
+        <memberType>M3</memberType>
+        <mitraId>0003</mitraId>
+    </content>
+</hpay>
+
+//Add Member Response
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="addMemberXMLResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accessId>085711202011</accessId>
+        <accountNo>000300001344</accountNo>
+        <memberName>Dahniar Palamani</memberName>
+        <pin>032253</pin>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000003</trxId>
+</hpay>
+==========================================================================================================
+//Activation Member Request
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000100010002</productCode>
+    <hpayTrxType>OTHER</hpayTrxType>
+    <content xsi:type="activationMemberXMLRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accessId>085711202011</accessId>
+        <channelRegistration>WEB</channelRegistration>
+        <pin>032253</pin>
+    </content>
+</hpay>
+
+//Activation Member Response
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="activationMemberXMLResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accountNo>000300001344</accountNo>
+        <memberName>Dahniar Palamani</memberName>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+==========================================================================================================
+//Reset PIN Request
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000100010003</productCode>
+    <hpayTrxType>OTHER</hpayTrxType>
+    <content xsi:type="resetPinXMLRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accessId>085711202012</accessId>
+        <newPin>123456</newPin>
+    </content>
+</hpay>
+
+//Reset PIN Response
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="resetPinXMLResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <newPin>123456</newPin>
+        <newPinEncrypt>@ffd8d6129303799c9f6c95407281eb4c</newPinEncrypt>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
+
+==========================================================================================================
+
+//Account Balance Request
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000100010004</productCode>
+    <hpayTrxType>OTHER</hpayTrxType>
+    <content xsi:type="accountInfoXMLRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accountNo>000300000002</accountNo>
+    </content>
+</hpay>
+
+//Account Balance Response
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="accountInfoXMLResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <accountNo>000300000002</accountNo>
+        <currentBalance>8130407</currentBalance>
+        <memberId>814</memberId>
+        <memberName>RUSDIANA</memberName>
+        <status>1</status>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
+
+==========================================================================================================
+Finnet : Telepon, Speedy, Telkomvision
+
+Telepon Inquiry Request :
+---------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020001</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="jastelXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <kodeArea>021</kodeArea>
+        <noTelp>86605459</noTelp>
+    </content>
+</hpay>
+
+Telepon Inquiry Response
+------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="jastelXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jastelBills>
+            <nilaiTagihan>35860</nilaiTagihan>
+            <noRef>505A       </noRef>
+        </jastelBills>
+        <jmlBill>1</jmlBill>
+        <kodeArea>021</kodeArea>
+        <kodeDatel>0001</kodeDatel>
+        <kodeDrive>02</kodeDrive>
+        <namaPelanggan> CHOLIDAH                     </namaPelanggan>
+        <noTelp>86605459</noTelp>
+        <npwp></npwp>
+        <totalAmount>35860</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000015</trxId>
+</hpay>
+
+Telepon Payment Request
+--------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020001</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="jastelXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <kodeArea>021</kodeArea>
+        <noTelp>86605459</noTelp>
+        <kodeDatel>0001</kodeDatel>
+        <kodeDrive>02</kodeDrive>
+        <jmlBill>1</jmlBill>
+        <jastelBills>
+            <nilaiTagihan>35860</nilaiTagihan>
+            <noRef>505A       </noRef>
+        </jastelBills>
+        <namaPelanggan> CHOLIDAH                     </namaPelanggan>
+        <totalAmount>35860</totalAmount>
+    </content>
+</hpay>
+
+Telepon Payment Response
+-----------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="jastelXMLPayResponse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <kodeArea>021</kodeArea>
+        <noTelp>86605459</noTelp>
+        <kodeDatel>0001</kodeDatel>
+        <kodeDrive>02</kodeDrive>
+        <namaPelanggan> CHOLIDAH                     </namaPelanggan>
+        <jmlBill>1</jmlBill>
+        <jastelBills>
+            <nilaiTagihan>35860</nilaiTagihan>
+            <noRef>505A       </noRef>
+        </jastelBills>
+        <totalAmount>35860</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000030</trxId>
+</hpay>
+
+Speedy Inquiry Request
+-----------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020001</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="jastelXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <noTelp>0131156100871</noTelp>
+    </content>
+</hpay>
+
+Speedy Inquiry Response
+------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="jastelXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jastelBills>
+            <nilaiTagihan>214500</nilaiTagihan>
+            <noRef>409A       </noRef>
+        </jastelBills>
+        <jmlBill>1</jmlBill>
+        <kodeArea></kodeArea>
+        <kodeDatel>0006</kodeDatel>
+        <kodeDrive>03</kodeDrive>
+        <namaPelanggan> NOPIYANTI                    </namaPelanggan>
+        <noTelp>0131156100871</noTelp>
+        <npwp></npwp>
+        <totalAmount>214500</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000031</trxId>
+</hpay>
+
+Speedy Payment Request
+--------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020001</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="jastelXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <jastelBills>
+            <nilaiTagihan>214500</nilaiTagihan>
+            <noRef>409A       </noRef>
+        </jastelBills>
+        <jmlBill>1</jmlBill>
+        <kodeArea></kodeArea>
+        <kodeDatel>0006</kodeDatel>
+        <kodeDrive>03</kodeDrive>
+        <namaPelanggan> NOPIYANTI                    </namaPelanggan>
+        <noTelp>0131156100871</noTelp>
+        <npwp></npwp>
+        <totalAmount>214500</totalAmount>
+    </content>
+</hpay>
+
+Speedy Payment Response
+------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="jastelXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jastelBills>
+            <nilaiTagihan>214500</nilaiTagihan>
+            <noRef>409A       </noRef>
+        </jastelBills>
+        <jmlBill>1</jmlBill>
+        <kodeArea></kodeArea>
+        <kodeDatel>0006</kodeDatel>
+        <kodeDrive>03</kodeDrive>
+        <namaPelanggan> NOPIYANTI                    </namaPelanggan>
+        <noTelp>0131156100871</noTelp>
+        <totalAmount>214500</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000032</trxId>
+</hpay>
+
+Telkomvision --> sama seperti Speedy
+
+==========================================================================================================
+
+<<<<<<<<<<<<<<<<<< Telkomsel dan Hallo Postpaid >>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request Telkomsel Postpaid
+---------------------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020003</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="tSelPostpaidXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <noHp>08112601930</noHp>
+    </content>
+</hpay>
+
+Inquiry Response Telkomsel Postpaid
+------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="tSelPostpaidXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billRef>50631911714</billRef>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeTsel>100011</kodeTsel>
+        <namaPelanggan>SYAFEIH</namaPelanggan>
+        <nilaiTagihan>69560</nilaiTagihan>
+        <noHp>0008112601930</noHp>
+        <totalAmount>0</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000034</trxId>
+</hpay>
+
+Payment Request Telkomsel Postpaid
+-------------------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020003</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="tSelPostpaidXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billRef>50631911714</billRef>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeTsel>100011</kodeTsel>
+        <namaPelanggan>SYAFEIH</namaPelanggan>
+        <nilaiTagihan>69560</nilaiTagihan>
+        <noHp>0008112601930</noHp>
+        <totalAmount>69560</totalAmount>
+    </content>
+</hpay>
+
+Payment Response Telkomsel Postpaid
+---------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="tSelPostpaidXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billRef>50631911714</billRef>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeTsel>100011</kodeTsel>
+        <namaPelanggan>SYAFEIH</namaPelanggan>
+        <nilaiTagihan>69560</nilaiTagihan>
+        <noHp>0008112601930</noHp>
+        <totalAmount>69560</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+
+==========================================================================================================
+<<<<<<<<<<<<<<<<<<<<<<< XL Postpaid >>>>>>>>>>>>>>>>>>>>>>>>>>
+Inquiry Request XL Postpaid
+-------------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020004</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="xlPostpaidXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <noHp>0222222015</noHp>
+    </content>
+</hpay>
+
+Inquiry Response XL Postpaid
+-------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xlPostpaidXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <customerNumber>00000062001</customerNumber>
+        <dueDate>31082014</dueDate>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeXL>100002</kodeXL>
+        <namaPelanggan>WARREN CUCURULLO_875</namaPelanggan>
+        <nilaiTagihan>585800</nilaiTagihan>
+        <noHp>0000222222001</noHp>
+        <totalAmount>585800</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000008</trxId>
+</hpay>
+
+Payment Request XL Postpaid
+-----------------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020004</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xlPostpaidXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <customerNumber>00000062001</customerNumber>
+        <dueDate>31082014</dueDate>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeXL>100002</kodeXL>
+        <namaPelanggan>WARREN CUCURULLO_875</namaPelanggan>
+        <nilaiTagihan>585800</nilaiTagihan>
+        <noHp>0000222222001</noHp>
+        <totalAmount>585800</totalAmount>
+    </content>
+</hpay>
+
+Payment Response XL Postpaid
+--------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xlPostpaidXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <customerNumber>00000062001</customerNumber>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeXL>100002</kodeXL>
+        <namaPelanggan>WARREN CUCURULLO_875</namaPelanggan>
+        <nilaiTagihan>585800</nilaiTagihan>
+        <noHp>0000222222001</noHp>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000011</trxId>
+</hpay>
+
+==========================================================
+<<<<<<<<<<<<<<<<<<< XL Prepaid >>>>>>>>>>>>>>>>>>>>>>
+
+Payment Request
+------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020005</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xlPrepaidXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <amount>20000</amount>
+        <noHp>087855591735</noHp>
+    </content>
+</hpay>
+
+Payment Response
+-------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xlPrepaidXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jmlTagihan>1</jmlTagihan>
+        <kodeXL>100050</kodeXL>
+        <nilaiPulsa>000000050000</nilaiPulsa>
+        <noHp>0087855591735</noHp>
+        <voucherSerialNumber></voucherSerialNumber>
+        <windowPeriod>00000000   </windowPeriod>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000011</trxId>
+</hpay>
+
+===================================================================
+<<<<<<<<<<<<<<<<<<< Simpati Prepaid >>>>>>>>>>>>>>>>>>>>>>
+
+Payment Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020006</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="tSelPrepaidXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <amount>25000</amount>
+        <noHp>082315541899</noHp>
+    </content>
+</hpay>
+
+Payment Response
+------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="tSelPrepaidXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jmlTagihan>1</jmlTagihan>
+        <kodeTsel>100020</kodeTsel>
+        <nilaiPulsa>000000025000</nilaiPulsa>
+        <noHp>0082315541899</noHp>
+        <voucherSerialNumber>0031000750674252</voucherSerialNumber>
+        <windowPeriod>00000030   </windowPeriod>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000023</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Three Prepaid >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Payment Request
+----------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020007</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="threePrepaidXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <amount>25000</amount>
+        <noHp>089611111001</noHp>
+    </content>
+</hpay>
+
+Payment Response
+------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="threePrepaidXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <jmlTagihan>1</jmlTagihan>
+        <kodeThree>200013</kodeThree>
+        <nilaiPulsa>000000025000</nilaiPulsa>
+        <noHp>0089611111001</noHp>
+        <transactionId>00000000000000000000</transactionId>
+        <voucherSerialNumber>00000000000000000000</voucherSerialNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000026</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< KAI >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Inquiry Request
+------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020009</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="kaiXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <kodePembayaran>9991509865107</kodePembayaran>
+    </content>
+</hpay>
+
+Inquiry Response
+---------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="kaiXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <from>ML  </from>
+        <jmlTrip>1</jmlTrip>
+        <kodeKAI>120001</kodeKAI>
+        <kodePembayaran>9991509865107</kodePembayaran>
+        <passangerName>ISTANA ROSIDIANA S            </passangerName>
+        <seats>EKS-1 8D                        </seats>
+        <to>SGU </to>
+        <totalAmount>40000</totalAmount>
+        <trainName>BIMA                            </trainName>
+        <trainNumber>41   </trainNumber>
+        <tripInfo>
+            <carrier></carrier>
+            <from>ML </from>
+            <hariBulan>0102</hariBulan>
+            <jamBerangkat>1330</jamBerangkat>
+            <jmlPenumpang>1</jmlPenumpang>
+            <kelas>H</kelas>
+            <to>SGU</to>
+            <tripNumber>0000</tripNumber>
+        </tripInfo>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000029</trxId>
+</hpay>
+
+Payment Request
+---------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020009</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="kaiXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <from>ML  </from>
+        <jmlTrip>1</jmlTrip>
+        <kodeKAI>120001</kodeKAI>
+        <kodePembayaran>9991509865107</kodePembayaran>
+        <passangerName>ISTANA ROSIDIANA S            </passangerName>
+        <seats>EKS-1 8D                        </seats>
+        <to>SGU </to>
+        <totalAmount>40000</totalAmount>
+        <trainName>BIMA                            </trainName>
+        <trainNumber>41   </trainNumber>
+        <tripInfo>
+            <carrier></carrier>
+            <from>ML </from>
+            <hariBulan>0102</hariBulan>
+            <jamBerangkat>1330</jamBerangkat>
+            <jmlPenumpang>1</jmlPenumpang>
+            <kelas>H</kelas>
+            <to>SGU</to>
+            <tripNumber>0000</tripNumber>
+        </tripInfo>
+    </content>
+</hpay>
+
+Payment Response
+--------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="kaiXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <from>ML  </from>
+        <jmlTrip>1</jmlTrip>
+        <kodeKAI>120001</kodeKAI>
+        <kodePembayaran>9991509865107</kodePembayaran>
+        <passangerName>ISTANA ROSIDIANA S            </passangerName>
+        <seats>EKS-1 8D                        </seats>
+        <to>SGU </to>
+        <totalAmount>40000</totalAmount>
+        <trainName>BIMA                            </trainName>
+        <trainNumber>41   </trainNumber>
+        <tripInfo>
+            <carrier></carrier>
+            <from>ML </from>
+            <hariBulan>0102</hariBulan>
+            <jamBerangkat>1330</jamBerangkat>
+            <jmlPenumpang>1</jmlPenumpang>
+            <kelas>H</kelas>
+            <to>SGU</to>
+            <tripNumber>0000</tripNumber>
+        </tripInfo>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000033</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Citilink >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Inquiry Request
+---------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020008</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="citilinkXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <kodeBayar>1396005550002</kodeBayar>
+    </content>
+</hpay>
+
+Inquiry Response
+---------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="citilinkXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <flights>
+            <flightInfo index="1">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1006</extHariBulan>
+                <extJam>1000</extJam>
+                <from>YGK</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>DPS</to>
+            </flightInfo>
+            <flightInfo index="2">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1106</extHariBulan>
+                <extJam>1000</extJam>
+                <from>DPS</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>JKT</to>
+            </flightInfo>
+        </flights>
+        <jmlFlight>2</jmlFlight>
+        <kodeBayar>1396005550002</kodeBayar>
+        <kodeBiller1>09</kodeBiller1>
+        <kodeBiller2>0003</kodeBiller2>
+        <passangerName>1WARREN GARUDA002             </passangerName>
+        <pnrCode>QNA002         </pnrCode>
+        <totalAmount>1000000</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000052</trxId>
+</hpay>
+
+Payment Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020008</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="citilinkXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <flights>
+            <flightInfo index="1">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1006</extHariBulan>
+                <extJam>1000</extJam>
+                <from>YGK</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>DPS</to>
+            </flightInfo>
+            <flightInfo index="2">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1106</extHariBulan>
+                <extJam>1000</extJam>
+                <from>DPS</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>JKT</to>
+            </flightInfo>
+        </flights>
+        <jmlFlight>2</jmlFlight>
+        <kodeBayar>1396005550002</kodeBayar>
+        <kodeBiller1>09</kodeBiller1>
+        <kodeBiller2>0003</kodeBiller2>
+        <passangerName>1WARREN GARUDA002             </passangerName>
+        <pnrCode>QNA002         </pnrCode>
+        <totalAmount>1000000</totalAmount>
+    </content>
+</hpay>
+
+Payment Response
+--------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="citilinkXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <flights>
+            <flightInfo index="1">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1006</extHariBulan>
+                <extJam>1000</extJam>
+                <from>YGK</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>DPS</to>
+            </flightInfo>
+            <flightInfo index="2">
+                <carier>GA</carier>
+                <extFlightNumber>0300</extFlightNumber>
+                <extHariBulan>1106</extHariBulan>
+                <extJam>1000</extJam>
+                <from>DPS</from>
+                <jmlPenumpang>2</jmlPenumpang>
+                <kelas>Y</kelas>
+                <to>JKT</to>
+            </flightInfo>
+        </flights>
+        <jmlFlight>2</jmlFlight>
+        <kodeBayar>1396005550002</kodeBayar>
+        <kodeBiller1>09</kodeBiller1>
+        <kodeBiller2>0003</kodeBiller2>
+        <totalAmount>1000000</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000058</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< AORA TV >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+-------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020010</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+     <content xsi:type="aoraXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <idPel>0007000941365</idPel>
+    </content>
+</hpay>
+
+Inquiry Response
+-------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="aoraXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billingCode>BC01           </billingCode>
+        <idPel>0007000941365</idPel>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeAoraTV>006001</kodeAoraTV>
+        <namaPaket>491568     </namaPaket>
+        <namaPelanggan>MELISA  KARTINA               </namaPelanggan>
+        <nilaiTagihan>98979</nilaiTagihan>
+        <totalAmount>98979</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000059</trxId>
+</hpay>
+
+Payment Request
+--------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020010</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="aoraXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billingCode>BC01           </billingCode>
+        <idPel>0007000941365</idPel>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeAoraTV>006001</kodeAoraTV>
+        <namaPaket>491568     </namaPaket>
+        <namaPelanggan>MELISA  KARTINA               </namaPelanggan>
+        <nilaiTagihan>98979</nilaiTagihan>
+        <totalAmount>98979</totalAmount>
+    </content>
+</hpay>
+
+Payment Response
+--------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="aoraXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <idPel>0007000941365</idPel>
+        <jmlTagihan>1</jmlTagihan>
+        <kodeAoraTV>006001</kodeAoraTV>
+        <successPaymentCode>491568     </successPaymentCode>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000060</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Indovision >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020011</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <content xsi:type="indovisionXMLInqRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <nomorPelanggan>0401000812179</nomorPelanggan>
+    </content>
+</hpay>
+
+Inquiry Response
+---------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="indovisionXMLInqResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <namaPelanggan>IRVAN SATYA, SE               </namaPelanggan>
+        <nomorPelanggan>0401000812179</nomorPelanggan>
+        <servicePeriod>19022015-18032015</servicePeriod>
+        <totalAmount>104900</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000061</trxId>
+</hpay>
+
+Payment Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000200020011</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="indovisionXMLPayRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <namaPelanggan>IRVAN SATYA, SE               </namaPelanggan>
+        <nomorPelanggan>0401000812179</nomorPelanggan>
+        <servicePeriod>19022015-18032015</servicePeriod>
+        <totalAmount>104900</totalAmount>
+    </content>
+</hpay>
+
+Payment Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="indovisionXMLPayResponse" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <namaPelanggan>IRVAN SATYA, SE               </namaPelanggan>
+        <nomorPelanggan>0401000812179</nomorPelanggan>
+        <servicePeriod>19022015-18032015</servicePeriod>
+        <totalAmount>104900</totalAmount>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000062</trxId>
+</hpay>
+
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VSI PLN POSTPAID >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request :
+-----------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030001</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestPostpaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <subscriberId>535349000094</subscriberId>
+    </content>
+</hpay>
+
+Inquiry Response :
+-------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponsePostpaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>1018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>1300</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000094</subscriberId>
+        <subscriberName>NIE BANK DKI  9 D        </subscriberName>
+        <subscriberSegmentation>  R1</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>3FFF844CB54F43259B540887D1EFA4AB</switcherRefNum>
+        <totalAdminCharges>1600</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+
+Payment Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030001</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPayRequestPostpaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>3018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>47000</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000098</subscriberId>
+        <subscriberName>NIE BANK DKI  9 H        </subscriberName>
+        <subscriberSegmentation>  I2</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>B5ED287EC6FA4F30BF87FE504B3F4E00</switcherRefNum>
+        <totalAdminCharges>0</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+</hpay>
+
+Payment Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPayResponsePostpaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <infoText>Informasi Hubungi Call Center: 123 Atau Hub. PLN Terdekat:</infoText>
+        <inquiryReferenceNumber>B5ED287EC6FA4F30BF87FE504B3F4E00</inquiryReferenceNumber>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>3018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>47000</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000098</subscriberId>
+        <subscriberName>NIE BANK DKI  9 H        </subscriberName>
+        <subscriberSegmentation>  I2</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>B5ED287EC6FA4F30BF87FE504B3F4E00</switcherRefNum>
+        <totalAdminCharges>0</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VSI PLN NONTAGLIST >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030002</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestNontaglist" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <registrationNumber>1100000025167</registrationNumber>
+    </content>
+</hpay>
+
+Inquiry Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponseNontaglist" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber></plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <subscriberName>ISMAIL ALI               </subscriberName>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+
+Payment Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030002</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPayRequestNontaglist" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber>                                </plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <subscriberName>ISMAIL ALI               </subscriberName>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+</hpay>
+
+Payment Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPayResponseNontaglist" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <infoText>Informasi Hubungi Call Center 234 Atau Hub PLN Terdekat :</infoText>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber></plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000005</trxId>
+</hpay>
+
+
+========================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VSI PLN PREPAID >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030003</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestPrepaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <meterSerialNumber></meterSerialNumber>
+        <subscriberId>232000610757</subscriberId>
+    </content>
+</hpay>
+
+Inquiry Response
+-----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponsePrepaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <totalAmount>0</totalAmount>
+        <totalRepeat>0</totalRepeat>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000010</trxId>
+</hpay>
+
+Payment Request
+-------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000300030003</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPurchaseRequestPrepaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <buyingOptions>0</buyingOptions>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <totalAmount>0</totalAmount>
+        <totalRepeat>0</totalRepeat>
+    </content>
+</hpay>
+
+Payment Response
+--------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPurchaseResponsePrepaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <buyingOptions>0</buyingOptions>
+        <customerPayablesInstallment>0</customerPayablesInstallment>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <infoText>Informasi Hubungi Call Center 123 Atau hubungi PLN Terdekat </infoText>
+        <inquiryRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</inquiryRefNumber>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitCustomerPayablesInstallment>2</minorUnitCustomerPayablesInstallment>
+        <minorUnitOfPowerPurchase>2</minorUnitOfPowerPurchase>
+        <minorUnitOfPublicLightingTax>2</minorUnitOfPublicLightingTax>
+        <minorUnitOfPurchasedKWHUnit>2</minorUnitOfPurchasedKWHUnit>
+        <minorUnitOfValueAddedTax>2</minorUnitOfValueAddedTax>
+        <minorUnitStampDuty>2</minorUnitStampDuty>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <powerPurchase>18018100</powerPurchase>
+        <publicLightingTax>1801900</publicLightingTax>
+        <purchaseKWHUnit>13330</purchaseKWHUnit>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <stampDuty>0</stampDuty>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>0NIS253517621870933B49306E911E0F</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <tokenNumber>11423871334774849013</tokenNumber>
+        <totalAmount>200000</totalAmount>
+        <totalRepeat>0</totalRepeat>
+        <valueAddedTax>0</valueAddedTax>
+        <vendingReceiptNumber>00000000</vendingReceiptNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< GSP PLN POSTPAID >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request :
+-----------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040001</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestPostpaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <subscriberId>535349000094</subscriberId>
+    </content>
+</hpay>
+
+Inquiry Response :
+-------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponsePostpaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>1018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>1300</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000094</subscriberId>
+        <subscriberName>NIE BANK DKI  9 D        </subscriberName>
+        <subscriberSegmentation>  R1</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>3FFF844CB54F43259B540887D1EFA4AB</switcherRefNum>
+        <totalAdminCharges>1600</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+
+Payment Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040001</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPayRequestPostpaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>3018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>47000</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000098</subscriberId>
+        <subscriberName>NIE BANK DKI  9 H        </subscriberName>
+        <subscriberSegmentation>  I2</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>B5ED287EC6FA4F30BF87FE504B3F4E00</switcherRefNum>
+        <totalAdminCharges>2000</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+</hpay>
+
+Payment Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPayResponsePostpaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <billStatus>1</billStatus>
+        <infoText>Informasi Hubungi Call Center: 123 Atau Hub. PLN Terdekat:</infoText>
+        <inquiryReferenceNumber>B5ED287EC6FA4F30BF87FE504B3F4E00</inquiryReferenceNumber>
+        <postpaidBillInfos>
+            <billPeriod>201408</billPeriod>
+            <currentMeterReading1>3018300</currentMeterReading1>
+            <currentMeterReading2>0</currentMeterReading2>
+            <currentMeterReading3>0</currentMeterReading3>
+            <dueDate>20082014</dueDate>
+            <incentive>D0000000000</incentive>
+            <meterReadDate>00000000</meterReadDate>
+            <penaltyFee>6000</penaltyFee>
+            <previousMeterReading1>1007700</previousMeterReading1>
+            <previousMeterReading2>0</previousMeterReading2>
+            <previousMeterReading3>0</previousMeterReading3>
+            <totalElectricityBill>00000125755</totalElectricityBill>
+            <valueAddedTax>0</valueAddedTax>
+        </postpaidBillInfos>
+        <powerConsumingCategory>47000</powerConsumingCategory>
+        <serviceUnit>53534</serviceUnit>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>535349000098</subscriberId>
+        <subscriberName>NIE BANK DKI  9 H        </subscriberName>
+        <subscriberSegmentation>  I2</subscriberSegmentation>
+        <switcherId>0000000</switcherId>
+        <switcherRefNum>B5ED287EC6FA4F30BF87FE504B3F4E00</switcherRefNum>
+        <totalAdminCharges>0</totalAdminCharges>
+        <totalAmount>131755</totalAmount>
+        <totalOutstandingBill>1</totalOutstandingBill>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
+
+===================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VSI PLN NONTAGLIST >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+--------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040002</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestNontaglist" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <registrationNumber>1100000025167</registrationNumber>
+    </content>
+</hpay>
+
+Inquiry Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponseNontaglist" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber></plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <subscriberName>ISMAIL ALI               </subscriberName>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000004</trxId>
+</hpay>
+
+Payment Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040002</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPayRequestNontaglist" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber>                                </plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <subscriberName>ISMAIL ALI               </subscriberName>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+</hpay>
+
+Payment Response
+----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPayResponseNontaglist" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>0</adminCharge>
+        <areaCode>11</areaCode>
+        <customDetails>
+            <customDetailAmount>0</customDetailAmount>
+            <customDetilCode>01</customDetilCode>
+            <minorUnitCustomDetail>2</minorUnitCustomDetail>
+        </customDetails>
+        <expirationDate>31032017</expirationDate>
+        <infoText>Informasi Hubungi Call Center 234 Atau Hub PLN Terdekat :</infoText>
+        <minorUnitAdminCharge>2</minorUnitAdminCharge>
+        <minorUnitPlnBill>2</minorUnitPlnBill>
+        <minorUnitTransactionAmount>2</minorUnitTransactionAmount>
+        <plnBillValue>2000000</plnBillValue>
+        <plnRefNumber></plnRefNumber>
+        <registrationDate>20130215</registrationDate>
+        <registrationNumber>1100000025167                   </registrationNumber>
+        <serviceUnit>11333</serviceUnit>
+        <serviceUnitAddress>456            20000000000200000020000000000200000020000000000</serviceUnitAddress>
+        <serviceUnitPhone>456            </serviceUnitPhone>
+        <subscriberId>111750132458</subscriberId>
+        <switcherId>0000000</switcherId>
+        <totalAmount>20000</totalAmount>
+        <totalRepeat>1</totalRepeat>
+        <transactionAmount>2000000</transactionAmount>
+        <transactionCode>034</transactionCode>
+        <transactionName>PERMINTAAN ANGSURAN      </transactionName>
+        <vsiReceiptRefNumber>620C9C19C95447A0A832DBAF3E0D05FE</vsiReceiptRefNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000005</trxId>
+</hpay>
+
+
+========================================================================================
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< VSI PLN PREPAID >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Inquiry Request
+------------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040003</productCode>
+    <hpayTrxType>INQUIRY</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlInqRequestPrepaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <meterSerialNumber></meterSerialNumber>
+        <subscriberId>232000610757</subscriberId>
+    </content>
+</hpay>
+
+Inquiry Response
+-----------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlInqResponsePrepaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <totalAmount>0</totalAmount>
+        <totalRepeat>0</totalRepeat>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000010</trxId>
+</hpay>
+
+Payment Request
+-------------------
+<hpay>
+	<channel>WEB</channel>
+    <productCode>000400040003</productCode>
+    <hpayTrxType>PAYMENT</hpayTrxType>
+    <account>000300000002</account>
+    <content xsi:type="xmlPurchaseRequestPrepaid" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <buyingOptions>0</buyingOptions>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <totalAmount>0</totalAmount>
+        <totalRepeat>0</totalRepeat>
+    </content>
+</hpay>
+
+Payment Response
+--------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<hpay>
+    <content xsi:type="xmlPurchaseResponsePrepaid" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <adminCharge>180000</adminCharge>
+        <buyingOptions>0</buyingOptions>
+        <customerPayablesInstallment>0</customerPayablesInstallment>
+        <distributionCode>23</distributionCode>
+        <flag>1</flag>
+        <infoText>Informasi Hubungi Call Center 123 Atau hubungi PLN Terdekat </infoText>
+        <inquiryRefNumber>2794C2CDF4AB49E3AD77C69ECDFABBCC</inquiryRefNumber>
+        <maxKWHLimit>1584</maxKWHLimit>
+        <meterSerialNumber>14047607446</meterSerialNumber>
+        <minorUnitCustomerPayablesInstallment>2</minorUnitCustomerPayablesInstallment>
+        <minorUnitOfPowerPurchase>2</minorUnitOfPowerPurchase>
+        <minorUnitOfPublicLightingTax>2</minorUnitOfPublicLightingTax>
+        <minorUnitOfPurchasedKWHUnit>2</minorUnitOfPurchasedKWHUnit>
+        <minorUnitOfValueAddedTax>2</minorUnitOfValueAddedTax>
+        <minorUnitStampDuty>2</minorUnitStampDuty>
+        <minorUnitofAdminCharge>2</minorUnitofAdminCharge>
+        <plnRefNumber>00000000000000000000000000000000</plnRefNumber>
+        <powerConsumingCategory>000002200</powerConsumingCategory>
+        <powerPurchase>18018100</powerPurchase>
+        <publicLightingTax>1801900</publicLightingTax>
+        <purchaseKWHUnit>13330</purchaseKWHUnit>
+        <serviceUnit>23200</serviceUnit>
+        <serviceUnitPhone>123            </serviceUnitPhone>
+        <stampDuty>0</stampDuty>
+        <subscriberId>232000610757</subscriberId>
+        <subscriberName>SUKAMTO K                </subscriberName>
+        <subscriberSegmentation>R1  </subscriberSegmentation>
+        <swRefNumber>0NIS253517621870933B49306E911E0F</swRefNumber>
+        <switcherId>0000000</switcherId>
+        <tokenNumber>11423871334774849013</tokenNumber>
+        <totalAmount>200000</totalAmount>
+        <totalRepeat>0</totalRepeat>
+        <valueAddedTax>0</valueAddedTax>
+        <vendingReceiptNumber>00000000</vendingReceiptNumber>
+    </content>
+    <responseCode>00</responseCode>
+    <responseMessage>SUKSES</responseMessage>
+    <trxId>000002</trxId>
+</hpay>
